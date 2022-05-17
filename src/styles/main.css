@@ -20,7 +20,7 @@
   }
   .Offcanvascss {
     /* background: #51361a !important; */
-    background: url('../../public/bgtropicalforest.jpg') no-repeat;
+    /* background: url('/public/bgtropicalforest.jpg') no-repeat; */
     -webkit-background-size : cover;
             background-size : cover;
     color: white;
@@ -28,7 +28,7 @@
   }
   .Navbarcss {
     /* background: #51361a !important; */
-    background: url('../../public/bgtropicalforest.jpg') no-repeat;
+    /* background: url('/public/bgtropicalforest.jpg') no-repeat; */
     -webkit-background-size : cover;
             background-size : cover;
     color: #ffffff;
@@ -275,7 +275,7 @@
   .head-area .head-content {
     height : 100%;
     z-index : 6;
-    background : url('/public/fingerMonkeyNFT.jpg') no-repeat center right;
+    /* background : url('/public/fingerMonkeyNFT.jpg') no-repeat center right; */
     -webkit-background-size : cover;
             background-size : cover;
             position: relative;
@@ -447,7 +447,7 @@
 .about-section {
   height : 100%;
   z-index : 6;
-  background : url('/public/gb.jpg') no-repeat center right;
+  /* background : url('/public/gb.jpg') no-repeat center right; */
   -webkit-background-size : cover;
           background-size : cover;
           position: relative;
