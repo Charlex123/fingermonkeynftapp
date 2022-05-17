@@ -1,0 +1,58 @@
+{
+  "dna": "49402202362a1c62a90694b661c1f5c8",
+  "name": "Untitled Project #578",
+  "description": null,
+  "image": "REPLACE-THIS-WITH-YOUR-URL/578.png",
+  "date": 1648487268815,
+  "attributes": [
+    {
+      "trait_type": "Bg",
+      "value": "vnfh56"
+    },
+    {
+      "trait_type": "face",
+      "value": "54889"
+    },
+    {
+      "trait_type": "mouth ",
+      "value": "74554"
+    },
+    {
+      "trait_type": "tongue ",
+      "value": "21557"
+    },
+    {
+      "trait_type": "teeth ",
+      "value": "98554"
+    },
+    {
+      "trait_type": "eyes",
+      "value": "66654"
+    },
+    {
+      "trait_type": "stick ",
+      "value": "443322"
+    },
+    {
+      "trait_type": "body",
+      "value": "798865"
+    },
+    {
+      "trait_type": "shirt",
+      "value": "7886"
+    },
+    {
+      "trait_type": "tail",
+      "value": "899455"
+    },
+    {
+      "trait_type": "hat",
+      "value": "34322"
+    },
+    {
+      "trait_type": "accessories ",
+      "value": "32455"
+    }
+  ],
+  "compiler": "mintables.club"
+}

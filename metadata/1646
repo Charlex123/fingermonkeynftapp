@@ -1,0 +1,58 @@
+{
+  "dna": "fd8218bf862c27c8d32ef7403746a3b0",
+  "name": "FM #68",
+  "description": null,
+  "image": "REPLACE-THIS-WITH-YOUR-URL/68.png",
+  "date": 1649498361943,
+  "attributes": [
+    {
+      "trait_type": "Bg",
+      "value": "vnfh56"
+    },
+    {
+      "trait_type": "face",
+      "value": "32877"
+    },
+    {
+      "trait_type": "mouth ",
+      "value": "453377"
+    },
+    {
+      "trait_type": "tongue ",
+      "value": "21557"
+    },
+    {
+      "trait_type": "teeth ",
+      "value": "944322"
+    },
+    {
+      "trait_type": "eyes",
+      "value": "967443"
+    },
+    {
+      "trait_type": "stick ",
+      "value": "443322"
+    },
+    {
+      "trait_type": "body",
+      "value": "09334"
+    },
+    {
+      "trait_type": "shirt",
+      "value": "78855"
+    },
+    {
+      "trait_type": "tail",
+      "value": "321456"
+    },
+    {
+      "trait_type": "hat",
+      "value": "134455"
+    },
+    {
+      "trait_type": "accessories ",
+      "value": "54443"
+    }
+  ],
+  "compiler": "mintables.club"
+}
