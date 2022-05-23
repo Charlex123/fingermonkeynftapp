@@ -13,8 +13,8 @@ import { useWeb3React } from "@web3-react/core";
 import {
     useDisclosure
   } from "@chakra-ui/react";
-// import WalletConnectProvider from "@walletconnect/web3-provider";
-// import { providers } from "ethers";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import { providers } from "ethers";
 // import {utils} from 'ethers'
 
 const Header = ({accounts, setAccounts}) => {
@@ -46,12 +46,12 @@ const Header = ({accounts, setAccounts}) => {
     <div className={styles.container}>
       <header className="topfixedheader">
           <Navbar className="Navbarcss" fixed="top" expand={false}>
-                <div className="bg-nav-overlay"></div>
+                {/* <div className="bg-nav-overlay"></div> */}
                 <Container fluid className="conta">
                     <Navbar.Brand href="../"><Image src={logo} width="220px" height="40px" className="" alt="logo"/></Navbar.Brand>             
                     <Navbar.Toggle aria-controls="offcanvasNavbar" className='text-white bg-warning'/>
-                    <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="start" className="Offcanvascss" >
-                    <div className='bg-nav-overlay'></div>
+                    <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end"  className="Offcanvascss bg-transparent" >
+                    {/* <div className='bg-nav-overlay'></div> */}
                     <Offcanvas.Header closeButton style={{color: 'white'}} className='text-white porelative'>
                         <Offcanvas.Title id="offcanvasNavbarLabel">FingerMonkey</Offcanvas.Title>
                     </Offcanvas.Header>

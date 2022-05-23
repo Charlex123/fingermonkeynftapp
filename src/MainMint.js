@@ -48,7 +48,6 @@ const MainMint = ({accounts, setAccounts}) => {
 
     return (
         <div className="minter" id="mintnft">
-            <div className="minter-bg-image"></div>
             <div className="minter-conta">
                 <h1 className="header">MINT NFT</h1>
                 {active ? 

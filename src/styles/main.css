@@ -14,26 +14,27 @@
     font-family: 'Nunito';
     color: white !important;
   }
+  ul li {
+    list-style: none;
+  }
   .conta {
       position: relative;
       z-index: 999;
   }
   .Offcanvascss {
     /* background: #51361a !important; */
-    /* background: url('/public/bgtropicalforest.jpg') no-repeat; */
-    -webkit-background-size : cover;
-            background-size : cover;
+    background: transparent !important;
     color: white;
     z-index: 9995;
   }
   .Navbarcss {
-    /* background: #51361a !important; */
+    background: transparent;
     /* background: url('/public/bgtropicalforest.jpg') no-repeat; */
     -webkit-background-size : cover;
             background-size : cover;
     color: #ffffff;
     /* border-bottom: 1px solid rgba(54, 117, 136, .3); */
-    height: 4.5rem;
+    height: 0;
     width: 100%;
     z-index: 99900;
   }
@@ -78,10 +79,12 @@
     text-shadow: 4px 5px #000015;
   }
   .minter {
-    @apply w-full sm:w-3/4 md:w-1/2 lg:w-3/5 xl:w-3/5 border border-white border-opacity-25 mx-auto px-4 py-6;
+      background: #ef8e11;
       position: relative;
       border-radius: 8px;
       margin: 8rem auto;
+      width: max-content;
+      padding: 4rem;
       text-align: center;
   }
   .connectwallet {
@@ -113,13 +116,13 @@
   }
   .mintbtn {
     @apply bg-opacity-75 font-bold py-1 my-8 px-8 mr-6 hover:border-yellow-900 hover:text-white hover:bg-opacity-50 rounded;
-    background-color: orange;
+    background-color: #ef8e11;
     font-family: 'Nunito';
     font-size: 20px;
   }
 .mintnft {
     @apply bg-opacity-75 font-bold py-1 px-1 mr-6 hover:border-yellow-900 hover:text-white hover:bg-opacity-50 rounded;
-    background-color: orange;
+    background-color: #ef8e11;
     font-family: 'Nunito';
     color: black;
     font-size: 20px;
@@ -133,7 +136,7 @@
   }
   .navbtn {
       @apply bg-opacity-75 font-bold py-1 px-1 mr-6 hover:border-yellow-900 hover:text-white hover:bg-opacity-50 rounded;
-      background-color: orange;
+      background-color: #ef8e11;
       font-family: 'Nunito';
       color: black;
       font-size: 20px;
@@ -159,8 +162,8 @@
       height: inherit;
     }
     .header { 
-      margin-top: 4rem;
-      padding-top: 1rem;
+      margin-top: 0;
+      padding-top: 0;
     }
     .head-area {
       position : relative;
@@ -170,13 +173,13 @@
 .header {
     @apply flex mx-auto py-1 justify-center;
     font-family: 'Creepster';
-    margin-top: 5rem;
+    margin-top: 0;
     font-size: 30px;
     font-weight: bold;
     opacity: 1;
     position: relative;
     letter-spacing: 3px;
-    color: orange!important;
+    color: #1b1111 !important;
     line-height: 30px;
     z-index: 5;
   }
@@ -270,12 +273,12 @@
 }
 .head-area {
     position : relative;
-    margin-top: 4rem;
+    margin-top: 0;
   }
   .head-area .head-content {
     height : 100%;
     z-index : 6;
-    /* background : url('/public/fingerMonkeyNFT.jpg') no-repeat center right; */
+    background : url('/src/junglebg.jpg') no-repeat center right;
     -webkit-background-size : cover;
             background-size : cover;
             position: relative;
@@ -310,7 +313,7 @@
   }
   .head-area .head-content h3 {
     margin-top : 4.375rem;
-    color : orange;
+    color : #ef8e11;
     font-size : 30px;
     line-height : 1.9rem;
     font-weight : 700;
@@ -347,7 +350,7 @@
       }
       .head-area {
         position : relative;
-        margin-top: 2rem;
+        margin-top: 0;
       }
     .head-area .head-content .banner-content {
       padding-top : 0.5rem !important;
@@ -377,7 +380,7 @@
     }
     .head-area {
       position : relative;
-      margin-top: 2rem;
+      margin-top: 0;
     }
     .head-area .head-content .banner-content {
       padding-top : 0.5rem !important;
@@ -421,7 +424,7 @@
     }
     .head-area {
       position : relative;
-      margin-top: 2rem;
+      margin-top: 0;
     }
     .head-area .head-content .banner-content {
       padding-top : 0.5rem !important;
@@ -447,7 +450,7 @@
 .about-section {
   height : 100%;
   z-index : 6;
-  /* background : url('/public/gb.jpg') no-repeat center right; */
+  background : #000000;
   -webkit-background-size : cover;
           background-size : cover;
           position: relative;
