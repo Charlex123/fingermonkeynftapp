@@ -14,6 +14,12 @@
     font-family: 'Nunito';
     color: white !important;
   }
+  .carousel {
+    background: #ef8e11;padding: 4rem 1rem;
+  }
+  .carousel .carousel-img {
+    width: 20rem !important;height: 20rem;border-radius: 8px;
+  }
   ul li {
     list-style: none;
   }

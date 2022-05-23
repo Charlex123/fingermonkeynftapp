@@ -12,7 +12,8 @@ import bannerbg from "./fingermonkeynftbanner.jpg";
 import './styles/index.css';
 import Header from "./Header";
 import MainMint from "./MainMint";
-import Carousel from '@brainhubeu/react-carousel';
+import Icon from 'react-fa';
+import Carousel, { slidesToShowPlugin, slidesToScrollPlugin, arrowsPlugin  } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import './styles/main.css';
 import {
@@ -35,6 +36,11 @@ import { connectors } from "./connectors";
 import { toHex, truncateAddress } from "./utils";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import img1 from "./11.png";
+import img2 from "./17.png";
+import img3 from "./55.png";
+import img4 from "./87.png";
+import img5 from "./141.png";
 
 library.add(faInstagram, faTwitter, faDiscord, faCheck, faCheckSquare);
 export default function Home() {
@@ -160,11 +166,11 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <section>
-                        <div>
+                    <section className="carousel">
+                        <div className="carouselcontainer">
                             <Carousel
                                 slidesPerPage={5}
-                                slidesPerScroll={2}
+                                slidesPerScroll={1}
                                 animationSpeed={1500}
                                 autoPlay={3000}
                                 stopAutoPlayOnHover
@@ -172,21 +178,43 @@ export default function Home() {
                                 itemWidth={250}
                                 clickToChange
                                 centered
+                                plugins={[
+                                    'centered',
+                                    'infinite',
+                                   {
+                                     resolve: slidesToShowPlugin,
+                                     options: {
+                                      numberOfSlides: 5,
+                                     },
+                                   },
+                                   {
+                                     resolve: slidesToScrollPlugin,
+                                     options: {
+                                      numberOfSlides: 2,
+                                     },
+                                   },
+                                   {
+                                    resolve: arrowsPlugin,
+                                    options: {
+                                      arrowLeft: <button style={{fontSize: 30, fontWeight: 'bolder',background: '#000000', color: '#ffffff', width: 'max-content', padding: '0 .4rem', borderRadius: 8}}><Icon name="angle-double-left" /></button>,
+                                      arrowLeftDisabled:<button><Icon name="angle-left" /></button>,
+                                      arrowRight: <button style={{fontSize: 30, fontWeight: 'bolder',background: '#000000', color: '#ffffff', width: 'max-content', padding: '0 .4rem', borderRadius: 8}}><Icon name="angle-double-right" /></button>,
+                                      arrowRightDisabled: <button><Icon name="angle-right" /></button>,
+                                      addArrowClickHandler: true,
+                                    }
+                                },
+                                 ]}   
                                 >
-                                <img src="11.png" className="carousel-img"/>
-                                <img src="17.png" className="carousel-img"/>
-                                <img src="55.png" className="carousel-img"/>
-                                <img src="87.png" className="carousel-img"/>
-                                <img src="141.png" className="carousel-img"/>
+                                    
+                                <img src={img1} className="carousel-img"/>
+                                <img src={img2} className="carousel-img"/>
+                                <img src={img3} className="carousel-img"/>
+                                <img src={img4} className="carousel-img"/>
+                                <img src={img5} className="carousel-img"/>
                             </Carousel>
-                            <img src="11.png" className="carousel-img"/>
-                                <img src="17.png" className="carousel-img"/>
-                                <img src="55.png" className="carousel-img"/>
-                                <img src="87.png" className="carousel-img"/>
-                                <img src="141.png" className="carousel-img"/>
                         </div>
                     </section>
-                    <section className="about-section pt-120 pb-120" id="about-us">
+                    <section className="about-section pt-120 pb-120 px-3" id="about-us">
                     <div className='bg-image-overlay'></div>
                     <div className="container">
                         <div className="col-md-12">
@@ -224,7 +252,7 @@ export default function Home() {
                     </div>
                 </section>
                 
-              <section className="roadmap-section pt-120 pb-120" id="roadmap">
+              <section className="roadmap-section pt-120 pb-120 px-2" id="roadmap">
                   <div className='bg-image-overlay'></div>
                   <div className="container">
                       <h1 className="text-center mx-auto py-8 my-8">OUR ROADMAP</h1>

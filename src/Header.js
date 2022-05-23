@@ -45,7 +45,7 @@ const Header = ({accounts, setAccounts}) => {
     return(
     <div className={styles.container}>
       <header className="topfixedheader">
-          <Navbar className="Navbarcss" fixed="top" expand={false}>
+          <Navbar className="Navbarcss" expand={false}>
                 {/* <div className="bg-nav-overlay"></div> */}
                 <Container fluid className="conta">
                     <Navbar.Brand href="../"><Image src={logo} width="220px" height="40px" className="" alt="logo"/></Navbar.Brand>             
