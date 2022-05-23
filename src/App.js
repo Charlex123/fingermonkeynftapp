@@ -140,10 +140,11 @@ export default function Home() {
     <>
     <section className="head-area fontNunito" id="head-area" data-midnight="white">
     
-                        <div id="particles-js"></div>
+                        <Header/>
                         <div className="head-content fontNunito container-fluid d-flex align-items-center">
+                        
                             <div className="container">
-                            <Header/>
+                            
                             <div className="head-bg-image"></div>
                                 <div className="banner-wrapper">
                                     <div className="align-items-center">
