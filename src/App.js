@@ -404,7 +404,7 @@ export default function Home() {
                                 </div>
                                 
                                 <div className='w-full mx-auto text-enter px-8 py-4'>
-                                    <h5 className='text-warning mx-auto text-center mb-4'>Follow our socials</h5>
+                                    <h5 className='text-warning mx-auto text-center mb-4'>FOLLOW</h5>
                                     <ul className="pt-1 flex mx-auto text-center" style={{width:'50%'}}>
                                         <li className="flex mx-auto text-center" style={{cursor: 'pointer'}}>
                                             <a href="https://twitter.com/SpecterOfArtNFT/status/1498512097008783360?s=20&t=FFLpsJW2b4N46qA_KcUVkA" passHref>

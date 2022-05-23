@@ -115,21 +115,28 @@
     background-color: #ffffff;margin: 0 .6rem;padding: .6rem;border-radius: 8px;font-size: 18px;font-weight: bold;
   }
   .mintbtn {
-    @apply bg-opacity-75 font-bold py-1 my-8 px-8 mr-6 hover:border-yellow-900 hover:text-white hover:bg-opacity-50 rounded;
     background-color: #ef8e11;
+    margin: .4rem;
     font-family: 'Nunito';
     font-size: 20px;
   }
 .mintnft {
-    @apply bg-opacity-75 font-bold py-1 px-1 mr-6 hover:border-yellow-900 hover:text-white hover:bg-opacity-50 rounded;
     background-color: #ef8e11;
     font-family: 'Nunito';
+    margin: .4rem;
+    padding: .4rem 1rem;
+    font-weight: bold;
     color: black;
+    border-radius: 8px;
     font-size: 20px;
   }
   .mintnft2 {
     @apply bg-opacity-75 font-bold py-1 px-4 mr-6 hover:border-yellow-900 hover:bg-opacity-50 rounded;
     background-color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: .4rem 1rem;
+    margin: .4rem;
     font-family: 'Nunito';
     color: 000015;
     font-size: 20px;
@@ -526,4 +533,14 @@
 .footer-section {
   background: #000015;
   color: #ffffff;
+  text-align: center;margin: auto;
+}
+.footer-section .footer--text {
+  margin: 1rem 0;font-size: 18px;text-align: left;
+}
+.footer-section ul {
+  display: inline-block;width: 100%;
+}
+.footer-section ul li {
+  display: inline-block;padding: .4rem;
 }
