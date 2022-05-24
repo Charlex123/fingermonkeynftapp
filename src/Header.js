@@ -10,37 +10,32 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import styles from './styles/main.css';
 import logo from './FingerMonkey.png'
 import { useWeb3React } from "@web3-react/core";
-import {
-    useDisclosure
-  } from "@chakra-ui/react";
+
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { providers } from "ethers";
 // import {utils} from 'ethers'
 
 const Header = ({accounts, setAccounts}) => {
-    // const isConnected = Boolean(accounts[0]);
-    const { isOpen, onOpen } = useDisclosure();
-    const {
-      active
-    } = useWeb3React();
-    // async function connectAccount() {
-    //     if(window.ethereum)  {
-    //         const accounts = await window.ethereum.request({
-    //             method: "eth_requestAccounts",
-    //         });
-    //         setAccounts(accounts);
-    //     } else {
-    //         //  Create WalletConnect Provider
-    //         // const provider = new WalletConnectProvider({
-    //         //     infuraId: "9de8cf7dd24f4ece94441cc3c8307ff9",
-    //         // });
+    const isConnected = Boolean(accounts[0]);
+    
+    async function connectAccount() {
+        if(window.ethereum)  {
+            const accounts = await window.ethereum.request({
+                method: "eth_requestAccounts",
+            });
+            setAccounts(accounts);
+        } else {
+            //  Create WalletConnect Provider
+            const provider = new WalletConnectProvider({
+                infuraId: "9de8cf7dd24f4ece94441cc3c8307ff9",
+            });
             
-    //         // //  Enable session (triggers QR Code modal)
-    //         // await provider.enable();
+            //  Enable session (triggers QR Code modal)
+            await provider.enable();
 
-    //         // const web3Provider = new providers.Web3Provider(provider);
-    //     }
-    // }
+            const web3Provider = new providers.Web3Provider(provider);
+        }
+    }
 
     return(
     <div className={styles.container}>
@@ -61,7 +56,7 @@ const Header = ({accounts, setAccounts}) => {
                             <Nav.Link href="../#about-us" className="nav-link text-white font-weight-bold">ABOUT</Nav.Link>
                             <Nav.Link href="../#faq" className="nav-link text-white">FAQ</Nav.Link>
                             <Nav.Link href="../#mintnft" ><Button className="nav-link text-dark bg-warning p-1 px-4 outline-success">MINT NFT</Button></Nav.Link>
-                            {active ? (<Button className="nav-link text-dark bg-warning p-1 outline-success">WALLET CONNECTED</Button>) : (<Button onClick={onOpen} className="nav-link text-dark bg-warning p-1 outline-none">CONNECT WALLET</Button>)}
+                            {isConnected ? (<Button className="nav-link text-dark bg-warning p-1 outline-success">WALLET CONNECTED</Button>) : (<Button onClick={connectAccount} className="nav-link text-dark bg-warning p-1 outline-none">CONNECT WALLET</Button>)}
                         </Nav>
                     </Offcanvas.Body>
                     </Navbar.Offcanvas>
