@@ -16,23 +16,11 @@ import Icon from 'react-fa';
 import Carousel, { slidesToShowPlugin, slidesToScrollPlugin, arrowsPlugin  } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import './styles/main.css';
-import {
-  VStack,
-  useDisclosure,
-  Button,
-  Text,
-  HStack
-  // Select,
-  // Input,
-  // Box
-} from "@chakra-ui/react";
 import { useWeb3React } from "@web3-react/core";
 import { CheckCircleIcon, CheckIcon, WarningIcon } from "@chakra-ui/icons";
 import { Image } from "@chakra-ui/react";
 // import { networkParams } from "./networks";
 import logo from './FingerMonkey.png';
-import { connectors } from "./connectors";
-import { toHex, truncateAddress } from "./utils";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import img1 from "./11.png";
@@ -40,16 +28,35 @@ import img2 from "./17.png";
 import img3 from "./55.png";
 import img4 from "./87.png";
 import img5 from "./141.png";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import { providers } from "ethers";
 
 library.add(faInstagram, faTwitter, faDiscord, faCheck, faCheckSquare);
 export default function Home() {
-  const [accounts, setAccounts] = useState([])
-  
-  useEffect(() => {
-    const provider = window.localStorage.getItem("provider");
-    if (provider) activate(connectors[provider]);
-  }, []);
+  const [accounts, setAccounts] = useState([]);
 
+  const isConnected = Boolean(accounts[0]);
+
+    async function connectAccount() {
+        if(window.ethereum)  {
+            const accounts = await window.ethereum.request({
+                method: "eth_requestAccounts",
+            });
+            setAccounts(accounts);
+        } else {
+            //  Create WalletConnect Provider
+            const provider = new WalletConnectProvider({
+                infuraId: "9de8cf7dd24f4ece94441cc3c8307ff9",
+            });
+            
+            //  Enable session (triggers QR Code modal)
+            await provider.enable();
+
+            const web3Provider = new providers.Web3Provider(provider);
+        }
+    }
+
+  
   return (
     <>
     <section className="head-area fontNunito" id="head-area" data-midnight="white">
@@ -66,10 +73,10 @@ export default function Home() {
                                             <div className="banner-content pt-5">
                                                 <h1 className="animated" data-animation="fadeInUpShorter" data-animation-delay="1.5s"><h1 className="head1">FINGERMONKEY NFT</h1> <div className="heada pt-2 mt-4 mb-5">Monkeys Are Taking Over</div></h1>
                                                 <div className="mt-5">
-                                                    {!active ? (
-                                                        <button className="mintnft2" onClick={onOpen}>CONNECT WALLET {truncateAddress(account)}</button>
+                                                    {!isConnected ? (
+                                                        <button className="mintnft2" onClick={connectAccount}>CONNECT WALLET </button>
                                                       ) : (
-                                                        <button className="mintnft2"  onClick={disconnect}>DISCONNECT</button>
+                                                        <button className="mintnft2">CONNECTED</button>
                                                       )}
                                                     <button className="mintnft"><a href="../#mintnft" className="text-white hover:text-yellow-900 px-2">MINT NFT</a></button>
                                                 </div>
