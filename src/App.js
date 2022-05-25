@@ -32,7 +32,7 @@ export default function Home() {
   const [accounts, setAccounts] = useState([]);
 
   const isConnected = Boolean(accounts[0]);
-
+  localStorage.setItem("connectionStatus", JSON.stringify(isConnected))
     async function connectAccount() {
         if(window.ethereum)  {
             const accounts = await window.ethereum.request({

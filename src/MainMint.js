@@ -9,24 +9,16 @@ import { providers } from "ethers";
 const fingerMonkeyNFTAddress = "0xb948E9C99fDC995dEfA411C4BFB94503d934d51d";
 
 const MainMint = () => {
-    const [account, setAccounts] = useState([]);
     const [mintAmount, setMintAmount] = useState(1);
-    const [isConnected, setisConnected] = useState(<p className="nav-link text-dark bg-white p-2 outline-none rounded mt-4">You Must Connect Wallet To Mint</p>); 
-    useEffect(() => {
+    const [accounts, setAccounts] = useState([]); 
+    const isConnected = JSON.parse(localStorage.getItem("connectionStatus"));
+
         async function connectAccount() {
             if(window.ethereum)  {
                 const accounts = await window.ethereum.request({
                     method: "eth_requestAccounts",
                 });
-                setAccounts(accounts[0]);
-                setisConnected(<div>
-                    <div className="flexone">
-                        <button onClick={handleDecrement} className="mintcounter">-</button>
-                        <input type="number" value={mintAmount} className="minterinput"/>
-                        <button onClick={handleIncrement} className="mintcounter">+</button>
-                    </div>
-                    <button onClick={handleMint} className="mintbtn">Mint FingerMonkey NFT</button>
-                </div>)
+                setAccounts(accounts);
             } else {
                 //  Create WalletConnect Provider
                 const provider = new WalletConnectProvider({
@@ -40,8 +32,6 @@ const MainMint = () => {
             }
         }
 
-        connectAccount();
-    })
 
     
 
@@ -79,7 +69,21 @@ const MainMint = () => {
         <div className="minter" id="mintnft">
             <div className="minter-conta">
                 <h1 className="header">MINT NFT</h1>
-                {isConnected} 
+                {isConnected ? 
+                (
+                <div>
+                    <div className="flexone">
+                        <button onClick={handleDecrement} className="mintcounter">-</button>
+                        <input type="number" value={mintAmount} className="minterinput bg-transparent border appearance-none border-white border-opacity-25 rounded w-full py-2 px-1 h-12 text-white leading-tight font-bold"/>
+                        <button onClick={handleIncrement} className="mintcounter">+</button>
+                    </div>
+                    <button onClick={handleMint} className="mintbtn bg-dark text-white p-2 mt-4 rounded font-weight-bold">Mint FingerMonkey NFT</button>
+                </div>
+                ) :
+                (
+                    <button onClick={connectAccount} className="nav-link text-dark bg-white p-2 outline-none rounded mt-4">You Must Connect Wallet To Mint</button>
+                )
+                }
             </div>
         </div>
     )
