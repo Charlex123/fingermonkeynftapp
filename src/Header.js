@@ -45,20 +45,15 @@ console.log(isConnected)
                 <Container fluid className="conta">
                     <Navbar.Brand href="../"><Image src={logo} width="220px" height="40px" className="" alt="logo"/></Navbar.Brand>             
                     <Navbar.Toggle aria-controls="offcanvasNavbar" className='text-white bg-warning'/>
-                    <Navbar.Offcanvas id="" className="bg-dark" aria-labelledby="offcanvasNavbarLabel" variant="" placement="end" >
-                    <Offcanvas.Header closeButton className='porelative'>
-                        <Offcanvas.Title id="offcanvasNavbarLabel">FingerMonkey</Offcanvas.Title>
-                    </Offcanvas.Header>
-                    <Offcanvas.Body className="bg-transparent">
-                        <Nav className="justify-content-end flex-grow-1 pe-3 text-dark">
-                            <Nav.Link href="../" className="nav-link text-dark">HOME</Nav.Link>
-                            <Nav.Link href="../#about-us" className="nav-link text-dark font-weight-bold">ABOUT</Nav.Link>
-                            <Nav.Link href="../#faq" className="nav-link text-dark">FAQ</Nav.Link>
+                    <Navbar.Collapse id="responsive-navbar-nav" placement="end" className="justify-content-end">
+                        <Nav>
+                            <Nav.Link href="../" className="nav-link text-white">HOME</Nav.Link>
+                            <Nav.Link href="../#about-us" className="nav-link text-white">ABOUT</Nav.Link>
+                            <Nav.Link href="../#faq" className="nav-link text-white">FAQ</Nav.Link>
                             <Nav.Link href="../#mintnft" ><Button className="nav-link text-dark bg-warning p-1 px-4 outline-success">MINT NFT</Button></Nav.Link>
                             {isConnected ? (<Button className="nav-link text-dark bg-warning p-1 outline-success">WALLET CONNECTED</Button>) : (<Button onClick={connectAccount} className="nav-link text-dark bg-warning p-1 outline-none">CONNECT WALLET</Button>)}
                         </Nav>
-                    </Offcanvas.Body>
-                    </Navbar.Offcanvas>
+                    </Navbar.Collapse>
                 </Container>
                 </Navbar>
         </header>
