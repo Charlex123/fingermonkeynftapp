@@ -23,6 +23,13 @@
   ul li {
     list-style: none;
   }
+  .head-top {
+    background : url('/src/junglebg.jpg') no-repeat center right;
+    -webkit-background-size : cover;
+            background-size : cover;
+            position: relative;
+            z-index: 999;
+  }
   .conta {
       position: relative;
       z-index: 999;
@@ -34,13 +41,13 @@
     z-index: 9995;
   }
   .Navbarcss {
-    background: transparent;
+    background: none;
     /* background: url('/public/bgtropicalforest.jpg') no-repeat; */
     -webkit-background-size : cover;
             background-size : cover;
     color: #ffffff;
     /* border-bottom: 1px solid rgba(54, 117, 136, .3); */
-    height: 0;
+    height: inherit;
     width: 100%;
     z-index: 99900;
   }
@@ -180,7 +187,7 @@
     }
     .head-area {
       position : relative;
-      margin-top: 2rem;
+      margin-top: 0;
     }
   }
 .header {
@@ -291,7 +298,7 @@
   .head-area .head-content {
     height : 100%;
     z-index : 6;
-    background : url('/src/junglebg.jpg') no-repeat center right;
+    /* background : url('/src/junglebg.jpg') no-repeat center right; */
     -webkit-background-size : cover;
             background-size : cover;
             position: relative;

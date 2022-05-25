@@ -8,7 +8,6 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
-import bannerbg from "./fingermonkeynftbanner.jpg";
 import './styles/index.css';
 import Header from "./Header";
 import MainMint from "./MainMint";
@@ -16,10 +15,7 @@ import Icon from 'react-fa';
 import Carousel, { slidesToShowPlugin, slidesToScrollPlugin, arrowsPlugin  } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import './styles/main.css';
-import { useWeb3React } from "@web3-react/core";
-import { CheckCircleIcon, CheckIcon, WarningIcon } from "@chakra-ui/icons";
 import { Image } from "@chakra-ui/react";
-// import { networkParams } from "./networks";
 import logo from './FingerMonkey.png';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -59,14 +55,15 @@ export default function Home() {
   
   return (
     <>
+    <div className="head-top">
+    <div className="head-bg-image"></div>
+    <Header/>
     <section className="head-area fontNunito" id="head-area" data-midnight="white">
     
-                        <Header/>
                         <div className="head-content fontNunito container-fluid d-flex align-items-center">
                         
                             <div className="container">
                             
-                            <div className="head-bg-image"></div>
                                 <div className="banner-wrapper">
                                     <div className="align-items-center">
                                         <div className="col-lg-12 col-md-12 mt-5 pt-5">
@@ -88,6 +85,8 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
+    </div>
+    
                     <section className="carousel">
                         <div className="carouselcontainer">
                             <Carousel

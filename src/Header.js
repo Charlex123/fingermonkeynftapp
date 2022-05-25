@@ -9,14 +9,13 @@ import Nav from 'react-bootstrap/Nav';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import styles from './styles/main.css';
 import logo from './FingerMonkey.png'
-import { useWeb3React } from "@web3-react/core";
 
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { providers } from "ethers";
 // import {utils} from 'ethers'
 
 const Header = ({accounts, setAccounts}) => {
-    const isConnected = Boolean(accounts[0]);
+    // const isConnected = Boolean(accounts[0]);
     
     async function connectAccount() {
         if(window.ethereum)  {
@@ -39,7 +38,7 @@ const Header = ({accounts, setAccounts}) => {
 
     return(
     <div className={styles.container}>
-      <header className="topfixedheader">
+      <header className="">
           <Navbar className="Navbarcss" expand={false}>
                 {/* <div className="bg-nav-overlay"></div> */}
                 <Container fluid className="conta">
@@ -56,7 +55,7 @@ const Header = ({accounts, setAccounts}) => {
                             <Nav.Link href="../#about-us" className="nav-link text-white font-weight-bold">ABOUT</Nav.Link>
                             <Nav.Link href="../#faq" className="nav-link text-white">FAQ</Nav.Link>
                             <Nav.Link href="../#mintnft" ><Button className="nav-link text-dark bg-warning p-1 px-4 outline-success">MINT NFT</Button></Nav.Link>
-                            {isConnected ? (<Button className="nav-link text-dark bg-warning p-1 outline-success">WALLET CONNECTED</Button>) : (<Button onClick={connectAccount} className="nav-link text-dark bg-warning p-1 outline-none">CONNECT WALLET</Button>)}
+                            {/* {isConnected ? (<Button className="nav-link text-dark bg-warning p-1 outline-success">WALLET CONNECTED</Button>) : (<Button onClick={connectAccount} className="nav-link text-dark bg-warning p-1 outline-none">CONNECT WALLET</Button>)} */}
                         </Nav>
                     </Offcanvas.Body>
                     </Navbar.Offcanvas>
