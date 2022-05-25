@@ -47,11 +47,11 @@ console.log(isConnected)
                     <Navbar.Toggle aria-controls="offcanvasNavbar" className='text-white bg-warning'/>
                     <Navbar.Collapse id="responsive-navbar-nav" placement="end" className="justify-content-end">
                         <Nav>
-                            <Nav.Link href="../" className="nav-link text-white">HOME</Nav.Link>
+                            <Nav.Link href="../" className="nav-link text-white mt-4">HOME</Nav.Link>
                             <Nav.Link href="../#about-us" className="nav-link text-white">ABOUT</Nav.Link>
                             <Nav.Link href="../#faq" className="nav-link text-white">FAQ</Nav.Link>
-                            <Nav.Link href="../#mintnft" ><Button className="nav-link text-dark bg-warning p-1 px-4 outline-success">MINT NFT</Button></Nav.Link>
-                            {isConnected ? (<Button className="nav-link text-dark bg-warning p-1 outline-success">WALLET CONNECTED</Button>) : (<Button onClick={connectAccount} className="nav-link text-dark bg-warning p-1 outline-none">CONNECT WALLET</Button>)}
+                            <Nav.Link href="../#mintnft" className="nav-link text-white text-right"><Button className="text-dark bg-warning p-1 px-4 outline-success">MINT NFT</Button></Nav.Link>
+                            <Nav.Link href="../#mintnft" className="nav-link text-white text-right">{isConnected ? (<Button className="text-dark bg-warning p-1 outline-success">WALLET CONNECTED</Button>) : (<Button onClick={connectAccount} className="text-dark bg-warning p-1 outline-none">CONNECT WALLET</Button>)}</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

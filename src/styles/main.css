@@ -55,6 +55,11 @@
     width: 100%;
     z-index: 99900;
   }
+  .nav-link {
+    margin: .4rem 0;
+    text-align: right;
+    justify-content: right;
+  }
   .porelative {
     position: relative;
     z-index: 10;
