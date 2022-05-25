@@ -36,9 +36,13 @@
   }
   .Offcanvascss {
     /* background: #51361a !important; */
-    background: red !important;
+    /* background: red !important; */
+    background: url('/src/junglebg.jpg') no-repeat;
+    -webkit-background-size : cover;
+            background-size : cover;
+            position: relative;
     color: black;
-    z-index: 9995;
+    z-index: 9995999999999999;
   }
   .Navbarcss {
     background: none;
